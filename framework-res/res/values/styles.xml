@@ -45,7 +45,7 @@
     </style>
     <style name="Theme">
         <item name="colorForeground">@color/bright_foreground_dark</item>
-        <item name="colorBackground">@color/transparent</item>
+        <item name="colorBackground">@color/background_dark</item>
         <item name="backgroundDimAmount">0.6</item>
         <item name="disabledAlpha">0.5</item>
         <item name="textAppearance">@style/TextAppearance</item>
@@ -80,7 +80,7 @@
         <item name="expandableListPreferredItemIndicatorRight">0.0dip</item>
         <item name="expandableListPreferredChildIndicatorLeft">?expandableListPreferredItemIndicatorLeft</item>
         <item name="expandableListPreferredChildIndicatorRight">?expandableListPreferredItemIndicatorRight</item>
-        <item name="windowBackground">@drawable/mybackground</item>
+        <item name="windowBackground">@drawable/screen_background_selector_dark</item>
         <item name="windowFrame">@null</item>
         <item name="windowNoTitle">false</item>
         <item name="windowIsFloating">false</item>
@@ -356,8 +356,8 @@
         <item name="windowFullscreen">true</item>
     </style>
     <style name="Theme.Black" parent="@style/Theme">
-        <item name="colorBackground">@color/transparent</item>
-        <item name="windowBackground">@drawable/mybackground</item>
+        <item name="colorBackground">@color/black</item>
+        <item name="windowBackground">@color/black</item>
     </style>
     <style name="Theme.Black.NoTitleBar" parent="@style/Theme.Black">
         <item name="windowNoTitle">true</item>
@@ -527,9 +527,11 @@
         <item name="clickable">true</item>
     </style>
     <style name="Widget.CompoundButton.CheckBox" parent="@style/Widget.CompoundButton">
+	<item name="textColor">@color/white</item>
         <item name="button">?listChoiceIndicatorMultiple</item>
     </style>
     <style name="Widget.CompoundButton.RadioButton" parent="@style/Widget.CompoundButton">
+	<item name="textColor">@color/white</item>
         <item name="button">?listChoiceIndicatorSingle</item>
     </style>
     <style name="Widget.CompoundButton.Star" parent="@style/Widget.CompoundButton">
@@ -792,7 +794,8 @@
     <style name="TextAppearance.Theme.Dialog" parent="@style/TextAppearance.Theme" />
     <style name="TextAppearance.Widget" parent="@style/TextAppearance" />
     <style name="TextAppearance.Widget.Button" parent="@style/TextAppearance.Small.Inverse">
-        <item name="textColor">@color/primary_text_light_nodisable</item>
+		<item name="textColor">@color/white</item>
+		<item name="android:colorBackground">#ff0c0c0c</item>
     </style>
     <style name="TextAppearance.Widget.IconMenu.Item" parent="@style/TextAppearance.Small">
         <item name="textSize">14.0dip</item>
@@ -813,7 +816,7 @@
     </style>
     <style name="TextAppearance.Widget.TextView.PopupMenu" parent="@style/TextAppearance.Widget.TextView">
         <item name="textSize">18.0sp</item>
-        <item name="textColor">?textColorPrimaryDisableOnly</item>
+        <item name="textColor">#fff1f1f1</item>
         <item name="textColorHint">?textColorHint</item>
     </style>
     <style name="TextAppearance.Widget.DropDownHint" parent="@style/TextAppearance.Widget">
@@ -953,8 +956,8 @@
         <item name="windowActionModeOverlay">true</item>
     </style>
     <style name="Theme.Holo" parent="@style/Theme">
-        <item name="colorForeground">@color/black</item>
-        <item name="colorBackground">@color/black</item>
+        <item name="colorForeground">@color/bright_foreground_holo_dark</item>
+        <item name="colorBackground">@color/background_holo_dark</item>
         <item name="backgroundDimAmount">0.6</item>
         <item name="disabledAlpha">0.5</item>
         <item name="textAppearance">@style/TextAppearance.Holo</item>
@@ -1585,6 +1588,7 @@
     </style>
     <style name="TextAppearance.Widget.PopupMenu.Large" parent="@style/TextAppearance.Widget.PopupMenu">
         <item name="textSize">22.0sp</item>
+		<item name="textColor">@color/white</item>
     </style>
     <style name="TextAppearance.Widget.PopupMenu.Small" parent="@style/TextAppearance.Widget.PopupMenu">
         <item name="textSize">14.0sp</item>
@@ -2777,6 +2781,14 @@
         <item name="textAllCaps">true</item>
         <item name="fontFamily">@string/font_family_button_material</item>
     </style>
+	<style name="TextAppearance.Material.Custom" parent="@style/TextAppearance">
+        <item name="textSize">@dimen/text_size_body_1_material</item>
+        <item name="textColor">@color/white</item>
+        <item name="textColorHighlight">?textColorHighlight</item>
+        <item name="textColorHint">?textColorHint</item>
+        <item name="textColorLink">?textColorLink</item>
+        <item name="fontFamily">@string/font_family_body_1_material</item>
+    </style>
     <style name="TextAppearance.Material.Body2" parent="@style/TextAppearance.Material">
         <item name="textSize">@dimen/text_size_body_2_material</item>
         <item name="textColor">?textColorPrimary</item>
@@ -2850,23 +2862,26 @@
     </style>
     <style name="TextAppearance.Material.Notification" parent="@style/TextAppearance.Material">
         <item name="textSize">@dimen/notification_text_size</item>
-        <item name="textColor">#fff1f1f1</item>
+        <item name="textColor">#fffafafa</item>
     </style>
     <style name="TextAppearance.Material.Notification.Emphasis" parent="@style/TextAppearance.Material.Notification">
-        <item name="textColor">#66000000</item>
+        <item name="textColor">#fffafafa</item>
     </style>
     <style name="TextAppearance.Material.Notification.Info" parent="@style/TextAppearance.Material.Notification">
         <item name="textSize">@dimen/notification_subtext_size</item>
+		<item name="textColor">#fffafafa</item>
     </style>
     <style name="TextAppearance.Material.Notification.Line2" parent="@style/TextAppearance.Material.Notification">
         <item name="textSize">@dimen/notification_subtext_size</item>
+		<item name="textColor">#fffafafa</item>
     </style>
     <style name="TextAppearance.Material.Notification.Time" parent="@style/TextAppearance.Material.Notification">
         <item name="textSize">@dimen/notification_subtext_size</item>
+		<item name="textColor">#fff1f1f1</item>
     </style>
     <style name="TextAppearance.Material.Notification.Title" parent="@style/TextAppearance.Material.Notification">
         <item name="textSize">@dimen/notification_title_text_size</item>
-        <item name="textColor">#ffffffff</item>
+        <item name="textColor">#fffafafa</item>
     </style>
     <style name="TextAppearance.Material.SearchResult.Subtitle" parent="@style/TextAppearance.Material.Subhead" />
     <style name="TextAppearance.Material.SearchResult.Title" parent="@style/TextAppearance.Material.Title" />
@@ -2946,15 +2961,15 @@
     <style name="TextAppearance.Material.Widget.Toolbar.Title" parent="@style/TextAppearance.Material.Widget.ActionBar.Title" />
     <style name="Theme.DeviceDefault.Settings" parent="@style/Theme.Material.Settings" />
     <style name="Theme.Material" parent="@style/Theme">
-        <item name="colorForeground">@color/black</item>
-        <item name="colorBackground">@color/black</item>
+        <item name="colorForeground">@color/bright_foreground_material_dark</item>
+        <item name="colorBackground">@color/background_material_dark</item>
         <item name="backgroundDimAmount">0.6</item>
         <item name="disabledAlpha">@dimen/disabled_alpha_material_dark</item>
         <item name="textAppearance">@style/TextAppearance.Material</item>
         <item name="textAppearanceInverse">@style/TextAppearance.Material.Inverse</item>
-        <item name="textColorPrimary">@color/white</item>
+        <item name="textColorPrimary">@color/primary_text_material_dark</item>
         <item name="textColorPrimaryDisableOnly">@color/primary_text_disable_only_material_dark</item>
-        <item name="textColorSecondary">@color/white</item>
+        <item name="textColorSecondary">@color/secondary_text_material_dark</item>
         <item name="textColorPrimaryInverse">@color/primary_text_material_light</item>
         <item name="textColorSecondaryInverse">@color/secondary_text_material_light</item>
         <item name="textColorHintInverse">@color/hint_foreground_material_light</item>
@@ -3710,9 +3725,9 @@
         <item name="popupTheme">?actionBarPopupTheme</item>
     </style>
     <style name="Widget.Material.ActionBar.Solid" parent="@style/Widget.Material.ActionBar">
-        <item name="background">@color/black</item>
-        <item name="backgroundStacked">@color/black</item>
-        <item name="backgroundSplit">@color/black</item>
+        <item name="background">?colorPrimary</item>
+        <item name="backgroundStacked">?colorPrimary</item>
+        <item name="backgroundSplit">?colorPrimary</item>
     </style>
     <style name="Widget.Material.ActionBar.TabBar" parent="@style/Widget.ActionBar.TabBar">
         <item name="divider">?actionBarDivider</item>
@@ -3761,6 +3776,7 @@
     </style>
     <style name="Widget.Material.AutoCompleteTextView" parent="@style/Widget.AutoCompleteTextView">
         <item name="dropDownSelector">?listChoiceBackgroundIndicator</item>
+		<item name="textColor">@color/white</item>
         <item name="popupBackground">@drawable/popup_background_material</item>
         <item name="popupElevation">@dimen/floating_window_z</item>
     </style>
@@ -3871,6 +3887,7 @@
     </style>
     <style name="Widget.Material.ListPopupWindow" parent="@style/Widget.ListPopupWindow">
         <item name="dropDownSelector">?listChoiceBackgroundIndicator</item>
+		<item name="textColor">@color/white</item>
         <item name="popupBackground">@drawable/popup_background_material</item>
         <item name="dropDownWidth">wrap_content</item>
         <item name="dropDownHorizontalOffset">0.0dip</item>
@@ -3966,6 +3983,7 @@
         <item name="gravity">start|center</item>
         <item name="background">@drawable/spinner_background_material</item>
         <item name="dropDownSelector">?listChoiceBackgroundIndicator</item>
+		<item name="textColor">@color/white</item>
         <item name="popupBackground">@drawable/popup_background_material</item>
         <item name="dropDownWidth">wrap_content</item>
         <item name="dropDownHorizontalOffset">0.0dip</item>
@@ -4912,7 +4930,7 @@
     <style name="Widget.Holo.Light.ImageWell" parent="@style/Widget.ImageWell" />
     <style name="Widget.Holo.Light.ListView.White" parent="@style/Widget.Holo.Light.ListView" />
     <style name="Widget.Holo.Light.PopupWindow.ActionMode" parent="@style/Widget.Holo.Light.PopupWindow">
-        <item name="popupBackground">@color/black</item>
+        <item name="popupBackground">@color/white</item>
         <item name="popupAnimationStyle">@style/Animation.PopupWindow.ActionMode</item>
     </style>
     <style name="Widget.Holo.Light.Spinner.DropDown" parent="@style/Widget.Holo.Light.Spinner" />
@@ -5299,6 +5317,7 @@
     <style name="Widget.Material.ImageWell" parent="@style/Widget.ImageWell" />
     <style name="Widget.Material.ListView.White" parent="@style/Widget.Material.ListView" />
     <style name="Widget.Material.PopupWindow.ActionMode" parent="@style/Widget.Material.PopupWindow">
+		<item name="textColor">@color/white</item>
         <item name="popupBackground">@drawable/popup_background_material</item>
         <item name="popupAnimationStyle">@style/Animation.PopupWindow.ActionMode</item>
         <item name="popupElevation">@dimen/floating_window_z</item>
@@ -5728,9 +5747,9 @@
     </style>
     <style name="Theme.Material.BaseDialog" parent="@style/Theme.Material">
         <item name="colorBackground">@color/background_floating_material_dark</item>
-        <item name="textAppearance">@style/TextAppearance.Material</item>
+        <item name="textAppearance">@style/TextAppearance.Material.Custom</item>
         <item name="textAppearanceInverse">@style/TextAppearance.Material.Inverse</item>
-        <item name="windowBackground">@drawable/dialog_background_material</item>
+        <item name="windowBackground">@drawable/popup_background_material</item>
         <item name="windowFrame">@null</item>
         <item name="windowIsFloating">true</item>
         <item name="windowContentOverlay">@null</item>
@@ -5778,9 +5797,9 @@
     </style>
     <style name="Theme.Material.Light.BaseDialog" parent="@style/Theme.Material.Light">
         <item name="colorBackground">@color/background_floating_material_light</item>
-		<item name="android:textColor">@android:color/white</item>
-        <item name="textAppearance">@style/TextAppearance.Material</item>
+        <item name="textAppearance">@style/TextAppearance.Material.Custom</item>
         <item name="textAppearanceInverse">@style/TextAppearance.Material.Inverse</item>
+		<item name="textColor">@color/white</item>
         <item name="windowBackground">@drawable/dialog_background_material</item>
         <item name="windowFrame">@null</item>
         <item name="windowIsFloating">true</item>
@@ -5819,31 +5838,31 @@
         <item name="windowMinWidthMinor">@dimen/dialog_min_width_minor</item>
     </style>
     <style name="Theme.Material.Settings.BaseDialog" parent="@style/Theme.Material.Light.BaseDialog">
-        <item name="colorBackground">@color/black</item>
+        <item name="colorBackground">@color/white</item>
         <item name="colorPrimary">@color/material_blue_grey_900</item>
         <item name="colorPrimaryDark">@color/material_blue_grey_950</item>
         <item name="colorAccent">@color/material_deep_teal_500</item>
     </style>
     <style name="Theme.Material.Settings.Dialog.BaseAlert" parent="@style/Theme.Material.Light.Dialog.BaseAlert">
-        <item name="colorBackground">@color/black</item>
+        <item name="colorBackground">@color/white</item>
         <item name="colorPrimary">@color/material_blue_grey_900</item>
         <item name="colorPrimaryDark">@color/material_blue_grey_950</item>
         <item name="colorAccent">@color/material_deep_teal_500</item>
     </style>
     <style name="Theme.Material.Settings.Dialog.Presentation" parent="@style/Theme.Material.Light.Dialog.Presentation">
-        <item name="colorBackground">@color/black</item>
+        <item name="colorBackground">@color/white</item>
         <item name="colorPrimary">@color/material_blue_grey_900</item>
         <item name="colorPrimaryDark">@color/material_blue_grey_950</item>
         <item name="colorAccent">@color/material_deep_teal_500</item>
     </style>
     <style name="Theme.Material.Settings.SearchBar" parent="@style/Theme.Material.Light.SearchBar">
-        <item name="colorBackground">@color/black</item>
+        <item name="colorBackground">@color/white</item>
         <item name="colorPrimary">@color/material_blue_grey_900</item>
         <item name="colorPrimaryDark">@color/material_blue_grey_950</item>
         <item name="colorAccent">@color/material_deep_teal_500</item>
     </style>
     <style name="Theme.Material.Settings.CompactMenu" parent="@style/Theme.Material.Light.CompactMenu">
-        <item name="colorBackground">@color/black</item>
+        <item name="colorBackground">@color/white</item>
         <item name="colorPrimary">@color/material_blue_grey_900</item>
         <item name="colorPrimaryDark">@color/material_blue_grey_950</item>
         <item name="colorAccent">@color/material_deep_teal_500</item>
@@ -5862,7 +5881,7 @@
         <item name="numberPickerStyle">@style/Widget.Micro.NumberPicker</item>
     </style>
     <style name="Theme.Micro.Light" parent="@style/Theme.Holo.Light.NoActionBar">
-        <item name="windowBackground">@color/black</item>
+        <item name="windowBackground">@color/white</item>
         <item name="windowIsFloating">false</item>
         <item name="windowIsTranslucent">true</item>
         <item name="windowContentOverlay">@null</item>
